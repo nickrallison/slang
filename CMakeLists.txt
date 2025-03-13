@@ -142,7 +142,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Windows")
 endif()
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
-  add_compile_options(/utf-8 /bigobj /permissive-)
+  add_compile_options(/utf-8 /bigobj /Zc:preprocessor /permissive-)
 endif()
 
 if(SLANG_FUZZ_TARGET)
