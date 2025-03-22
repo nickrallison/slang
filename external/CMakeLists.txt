@@ -218,7 +218,13 @@ if(SLANG_INCLUDE_INSTALL)
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ieee1800
     COMPONENT slang_Development)
   install(
-    FILES ${PROJECT_SOURCE_DIR}/external/expected.hpp
+    FILES
+        ${PROJECT_SOURCE_DIR}/external/expected.hpp
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+    COMPONENT slang_Development)
+  install(
+    FILES
+        ${PROJECT_SOURCE_DIR}/external/BS_thread_pool.hpp
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
     COMPONENT slang_Development)
 
@@ -242,7 +248,9 @@ if(SLANG_INCLUDE_INSTALL)
       EXPORT slangTargets
       COMPONENT slang_Development)
     install(
-      FILES ${PROJECT_SOURCE_DIR}/external/boost_unordered.hpp
+      FILES
+          ${PROJECT_SOURCE_DIR}/external/boost_unordered.hpp
+          ${PROJECT_SOURCE_DIR}/external/boost_concurrent.hpp
       DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
       COMPONENT slang_Development)
   endif()
